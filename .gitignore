@@ -1,10 +1,12 @@
 .vscode/
-vs/
+.vs/
+__pycache__/
 
 build/
+*.app/
 
-temp/
 tmp/
+temp/
 backup/
 install/
 
@@ -14,5 +16,9 @@ install/
 *.so
 *.o
 *.lib
+*.dll
 *.bin
 *.exe
+*.pdb
+
+*.log

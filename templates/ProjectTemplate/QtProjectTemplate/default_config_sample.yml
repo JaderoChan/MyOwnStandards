@@ -1,0 +1,10 @@
+organ: "MyOrganization"
+organ_domain: "com.myorganization"
+name: "NewQtProject"
+ver: "0.0.1"
+author: "AuthorName"
+email: "contact_email@example.com"
+copyright: "Copyright (C) 2026 AuthorName"  # 可留空，将自动根据年份和作者名生成
+cppver: 17
+appico: "/path/to/icon.ico"
+appicns: "/path/to/icon.icns"
