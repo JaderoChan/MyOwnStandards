@@ -10,6 +10,7 @@ static QIcon createLogoIcon()
     icon.addFile(":/icons/app_128.png");
     icon.addFile(":/icons/app_256.png");
     icon.addFile(":/icons/app_512.png");
+    icon.addFile(":/icons/app_1024.png");
 
     return icon;
 }
@@ -20,7 +21,7 @@ QIcon getLogoIcon()
     return icon;
 }
 
-QPixmap getLogoPixmap()
+QPixmap getLogoPixmap(int extent)
 {
-    return getLogoIcon().pixmap(512);
+    return getLogoIcon().pixmap(extent);
 }
