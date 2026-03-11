@@ -6,8 +6,8 @@
 
 #include <easy_translate.hpp>
 
-#include "config.h"
-#include "utils/debug_output.h"
+#include <config.h>
+#include <utils/debug_output.h>
 
 QString getLanguageStringId(Language lang)
 {
@@ -50,7 +50,7 @@ private:
 bool setLanguage(Language lang)
 {
     {
-        DirectoryScope dirScope(APP_RESOURCE_DIRPATH);
+        DirectoryScope dirScope(APP_RESOURCES_DIRPATH);
         easytr::setLanguages(easytr::Languages::fromFile(APP_LANG_FILEPATH));
     }
     if (easytr::languages().empty())
@@ -67,7 +67,7 @@ bool setLanguage(Language lang)
     }
 
     {
-        DirectoryScope dirScope(APP_RESOURCE_DIRPATH);
+        DirectoryScope dirScope(APP_RESOURCES_DIRPATH);
         if (!easytr::setCurrentLanguage(id))
         {
             debugOut(qWarning(), "[Language] Failed to set the current language to %1.", QString::fromStdString(id));

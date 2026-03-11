@@ -2,7 +2,7 @@
 
 #include <qsettings.h>
 
-#include "config.h"
+#include <config.h>
 
 Settings loadSettings()
 {
