@@ -6,7 +6,7 @@ cmake_minimum_required(VERSION 3.17)
 
 # 配置config头文件
 configure_file(
-    ${CMAKE_TEMPLATE_DIR}/config.h.in
+    ${CMAKE_TEMPLATES_DIR}/config.h.in
     ${CMAKE_CURRENT_BINARY_DIR}/include/config.h
     @ONLY
 )
@@ -79,7 +79,7 @@ if(WIN32)
 
     set(RC_FILE ${CMAKE_CURRENT_BINARY_DIR}/app.rc)
     configure_file(
-        ${CMAKE_TEMPLATE_DIR}/app.rc.in
+        ${CMAKE_TEMPLATES_DIR}/app.rc.in
         ${RC_FILE}
         @ONLY
     )
@@ -96,7 +96,7 @@ elseif(APPLE)
     )
     foreach(INFO_PLIST_STRINGS_NAME IN LISTS INFO_PLIST_STRINGS_NAMES)
         configure_file(
-            ${CMAKE_TEMPLATE_DIR}/InfoPlistStrings/${INFO_PLIST_STRINGS_NAME}/InfoPlist.strings.in
+            ${CMAKE_TEMPLATES_DIR}/InfoPlistStrings/${INFO_PLIST_STRINGS_NAME}/InfoPlist.strings.in
             ${CMAKE_CURRENT_BINARY_DIR}/${INFO_PLIST_STRINGS_NAME}/InfoPlist.strings
             @ONLY
         )
@@ -113,7 +113,7 @@ elseif(APPLE)
     # Info Plist
     set(MACOSX_BUNDLE_INFO_PLIST ${CMAKE_CURRENT_BINARY_DIR}/Info.plist)
     configure_file(
-        ${CMAKE_TEMPLATE_DIR}/Info.plist.in
+        ${CMAKE_TEMPLATES_DIR}/Info.plist.in
         ${MACOSX_BUNDLE_INFO_PLIST}
         @ONLY
     )

@@ -49,7 +49,7 @@ set(APP_COPYRIGHT_TEXT "")
 # CMake文件夹
 set(CMAKE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
 # CMake模板文件夹
-set(CMAKE_TEMPLATE_DIR ${CMAKE_DIR}/template)
+set(CMAKE_TEMPLATES_DIR ${CMAKE_DIR}/templates)
 # 脚本文件夹路径
 set(SCRIPTS_DIR ${CMAKE_CURRENT_SOURCE_DIR}/scripts)
 # 语言文件夹路径
