@@ -9,12 +9,6 @@
 
 int main(int argc, char* argv[])
 {
-    // 设置语言
-    {
-        Settings settings = loadSettings();
-        setLanguage(settings.language);
-    }
-
     // 设置程序全局属性
     QApplication a(argc, argv);
     a.setOrganizationDomain(APP_ORGANIZATION_DOMAIN);
@@ -22,6 +16,12 @@ int main(int argc, char* argv[])
     a.setApplicationName(APP_TITLE);
     a.setApplicationVersion(APP_VERSION);
     a.setWindowIcon(getLogoIcon());
+
+    // 设置语言
+    {
+        Settings settings = loadSettings();
+        setLanguage(settings.language);
+    }
 
     // TODO
 
